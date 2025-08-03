@@ -15,7 +15,7 @@ Feel free to connect or contact me:
 - 📧 Email: deepaksinghmahalwar.2021@gmail.com  
 - 🌐 Portfolio: [deepaksingh.dev](https://deepaksinghportfolio1.netlify.app/)
 - 💼 LinkedIn: [@DeepakSingh](https://linkedin.com/in/deepaksingh)  
-- 📷 Instagram: [@deepaksinghmahalwar](https://www.instagram.com/chaudhary_deepaksinghmahalwar/profilecard/?igsh=bnQyeTg1YTE3bHJ4)
+- 📷 Instagram: [@chaudhary_deepaksinghmahalwar](https://www.instagram.com/chaudhary_deepaksinghmahalwar/profilecard/?igsh=bnQyeTg1YTE3bHJ4)
 
 ---
 
