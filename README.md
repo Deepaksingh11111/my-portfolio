@@ -22,7 +22,7 @@ Feel free to connect or contact me:
 ## 🌐 Live Demo
 
 Check out the live version here:  
-🔗 [https://yourusername.github.io/portfolio](https://deepaksinghportfolio1.netlify.app/)
+🔗 [https://DeepakSingh.github.io/portfolio](https://deepaksinghportfolio1.netlify.app/)
 
 ---
 
