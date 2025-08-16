@@ -9,7 +9,7 @@
 ---
 
 ## 📌 About the Project  
-This is my personal **3D animated portfolio website** built to showcase my skills, education, and projects.  
+This is my personal **  animated portfolio website** built to showcase my skills, education, and projects.  
 It features **glassmorphic UI**, **3D animations**, and smooth transitions for a modern user experience.  
 
 🔗 **Live Demo:** [View Portfolio](https://deepaksinghportfolio1.netlify.app/)  
@@ -20,7 +20,7 @@ It features **glassmorphic UI**, **3D animations**, and smooth transitions for a
 - ⚡ Fully responsive design (mobile, tablet, desktop)  
 - 🎨 Glassmorphic user interface with animations  
 - 🖼️ Interactive sections for **About Me, Skills, Projects, and Education**  
-- 🔗 Integrated GitHub & LinkedIn links  
+- 🔗 Integrated GitHub ,LinkedIn,gmail,instagram,youtube,hackerrank links  
 - 📂 Deployed with **GitHub Pages**  
 
 ---
@@ -32,6 +32,18 @@ It features **glassmorphic UI**, **3D animations**, and smooth transitions for a
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-181717?style=flat-square&logo=github&logoColor=white)
+---
+
+## 📬 Contact Me  
+
+I’d love to connect with you!  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Deepak%20Singh-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/deepaksingh)  
+[![GitHub](https://img.shields.io/badge/GitHub-Deepaksingh11111-black?style=flat-square&logo=github)](https://github.com/Deepaksingh11111)  
+[![Instagram](https://img.shields.io/badge/Instagram-@deepaksinghmahalwar-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/deepaksinghmahalwar)  
+[![Email](https://img.shields.io/badge/Email-deepaksinghmahalwar.2021@gmail.com-red?style=flat-square&logo=gmail&logoColor=white)](mailto:deepaksinghmahalwar.2021@gmail.com)  
+[![Phone](https://img.shields.io/badge/Phone-%2B91--6398267378-brightgreen?style=flat-square&logo=whatsapp&logoColor=white)](tel:+916398267378)  
+
 
 ---
 
@@ -47,14 +59,5 @@ git clone https://github.com/Deepaksingh11111/my-portfolio.git
 cd my-portfolio
 
 # Open index.html in browser
----
 
-📬 Contact Me
 
-📧 Email: deepaksinghmahalwar.2021@gmail.com
-
-💼 LinkedIn: Deepak Singh
-
-💻 GitHub: Deepaksingh11111
-
-🏆 HackerRank: 3Deepaksingh
