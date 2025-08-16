@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/src/style.css" rel="stylesheet">
+<title>Deepak Singh - Web Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#fbbf24',secondary:'#f59e0b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.glass-effect { backdrop-filter: blur(10px); background: rgba(0, 0, 0, 0.3); }
+.animate-counter { transition: all 0.7s ease; }
+.progress-circle { transform: rotate(-90deg); }
+.progress-circle circle { transition: stroke-dashoffset 0.5s ease; }
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+html { scroll-behavior: smooth; }
+#typing-text::after {
+  content: '|';
+  margin-left: 5px;
+  color: gold;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.typing-glow {
+  background: rgba(255, 215, 0, 0.15); /* golden transparent background */
+  padding: 5px 10px;
+  border-radius: 8px;
+  animation: glow-pulse 1.5s infinite;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 20px gold;
+  }
+  50% {
+    box-shadow: 0 0 15px gold, 0 0 25px goldenrod, 0 0 35px gold;
+  }
+  100% {
+    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 20px gold;
+  }
+}
+
+#typing-text::after {
+  content: '|';
+  margin-left: 5px;
+  color: gold;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+</style>
+
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+<div class="container mx-auto max-w-7xl px-8 lg:px-16">
+<div class="flex items-center justify-between h-20">
+<a href="#home" class="text-2xl font-['Pacifico'] text-primary">Deepak Singh portfolio</a>
+<div class="hidden md:flex items-center gap-8">
+<a href="#home" class="text-sm font-medium hover:text-primary transition-colors">HOME</a>
+<a href="#about" class="text-sm font-medium hover:text-primary transition-colors">ABOUT</a>
+<a href="#skills" class="text-sm font-medium hover:text-primary transition-colors">SKILLS</a>
+<a href="#experience" class="text-sm font-medium hover:text-primary transition-colors">EXPERIENCE</a>
+<a href="#projects" class="text-sm font-medium hover:text-primary transition-colors">PROJECTS</a>
+<a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">CONTACT</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-2xl hover:text-primary transition-colors" id="mobile-menu-button">
+<i class="ri-menu-line"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-gray-900/95 backdrop-blur-sm" id="mobile-menu">
+<div class="container mx-auto px-8 py-4 flex flex-col gap-4">
+<a href="#home" class="text-sm font-medium hover:text-primary transition-colors py-2">HOME</a>
+<a href="#about" class="text-sm font-medium hover:text-primary transition-colors py-2">ABOUT</a>
+<a href="#skills" class="text-sm font-medium hover:text-primary transition-colors py-2">SKILLS</a>
+<a href="#experience" class="text-sm font-medium hover:text-primary transition-colors py-2">EXPERIENCE</a>
+<a href="#projects" class="text-sm font-medium hover:text-primary transition-colors py-2">PROJECTS</a>
+<a href="#contact" class="text-sm font-medium hover:text-primary transition-colors py-2">CONTACT</a>
+</div>
+</div>
+</nav>
+<!-- Social Sidebar -->
+<div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
+<a href="https://github.com/Deepaksingh11111" class="w-12 h-12 flex items-center justify-center bg-gray-800 hover:bg-primary text-white hover:text-black rounded-full transition-all duration-300">
+<i class="ri-github-line text-xl"></i>
+</a>
+<a href="https://www.linkedin.com/in/deepak-singh-04b645333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+   class="w-12 h-12 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-all duration-300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+       class="w-6 h-6">
+</a>
+<a href="https://www.instagram.com/chaudhary_deepaksinghmahalwar/profilecard/?igsh=bnQyeTg1YTE3bHJ4" target="_blank"
+   class="w-12 h-12 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-all duration-300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+       class="w-6 h-6">
+</a>
+<a href="mailto:deepaksinghmahalwar.2021@gmail.com"
+   class="w-12 h-12 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-all duration-300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email"
+       class="w-6 h-6">
+</a>
+<a href="https://www.hackerrank.com/profile/3Deepaksingh" target="_blank"
+   class="w-12 h-12 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-all duration-300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank"
+       class="w-6 h-6">
+</a>
+<a href="https://www.youtube.com/@hearthacker1999" target="_blank"
+   class="w-12 h-12 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-all duration-300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube"
+       class="w-6 h-6">
+</a>
+</div>
+<!-- Header Section -->
+<style>
+  /* Golden glow animation */
+  .golden-glow {
+    transition: box-shadow 0.4s ease-in-out, border-color 0.4s ease-in-out;
+  }
+
+  .golden-glow:hover {
+    border-color: gold;
+    box-shadow: 0 0 15px gold, 0 0 30px gold, 0 0 45px gold;
+  }
+  
+</style>
+
+<section id="home" class="min-h-screen flex items-center px-8 lg:px-16 relative overflow-hidden pt-20">
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
+  <div class="container mx-auto max-w-7xl relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <div class="relative mb-8">
+          <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary golden-glow">
+            <img
+              src="https://static.readdy.ai/image/43d50a9ff6088dd04a422afef1ce1357/d8da7fee018fbd21722ec148bc2c1436.jfif"
+              alt="Deepak Singh"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+            <i class="ri-code-line text-2xl text-black"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content Column -->
+      <div class="fade-in">
+        <h1 class="text-5xl lg:text-6xl font-bold mb-4">
+          <span class="text-primary">DEEPAK SINGH</span>
+        </h1>
+        <h2 id="typing-text" class="text-2xl lg:text-3xl font-light mb-6 text-gray-300">
+  Bachelor of Computer Applications
+</h2>
+        <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+          I'm a Computer Applications student at Galgotias University, passionate about AI and web development. I have experience in full-stack development using React.js, Node.js, and various modern technologies.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepaksinghmahalwar.2021@gmail.com" target="_blank">
+            <button class="bg-primary text-black px-8 py-4 !rounded-button font-semibold hover:bg-secondary hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-300 whitespace-nowrap">
+              HIRE ME
+            </button>
+          </a>
+          <a class="resume-btn" href="https://drive.google.com/uc?export=download&id=16c9R3erPhoYkEH7rsYIItRfDYshLJZPb"
+            target="_blank" rel="noopener noreferrer">
+            <span class="icon">📄</span>
+            <span class="text">Download Resume</span>
+          </a>
+        </div>
+        <style>
+          .resume-btn {
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px 18px;
+            border-radius: 14px;
+            backdrop-filter: blur(8px) saturate(120%);
+            background: rgba(255, 215, 0, 0.08); /* light golden glass */
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #FFD700; /* gold text */
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+          }
+          .resume-btn .icon {
+            display: inline-grid;
+            place-items: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 215, 0, 0.15);
+            font-size: 18px;
+            transition: transform 0.18s ease;
+          }
+          .resume-btn:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 30px rgba(255, 215, 0, 0.6);
+            border-color: rgba(255, 215, 0, 0.5);
+          }
+        </style>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Me Section -->
+<section id="about" class="py-20 px-8 lg:px-16">
+<div class="container mx-auto max-w-7xl">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl lg:text-5xl font-bold mb-4">ABOUT <span class="text-primary">ME</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid lg:grid-cols-2 gap-16">
+<!-- Personal Info -->
+<div class="fade-in">
+<h3 class="text-2xl font-bold mb-8 text-primary">PERSONAL INFO</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div>
+<span class="text-gray-400">First Name:</span>
+<span class="ml-2 font-medium">Deepak</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div>
+<span class="text-gray-400">Last Name:</span>
+<span class="ml-2 font-medium">Singh</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div>
+<span class="text-gray-400">Address:</span>
+<span class="ml-2 font-medium"> Aligarh, Uttar Pradesh</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div>
+<span class="text-gray-400">Phone:</span>
+<span class="ml-2 font-medium">+91 6398267378</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div>
+<span class="text-gray-400">Email:</span>
+<span class="ml-1 font-medium">deepaksinghmahalwar.2021@gmail.com</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div>
+<span class="text-gray-400">Languages:</span>
+<span class="ml-2 font-medium">English, Hindi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="fade-in">
+<div class="grid grid-cols-2 gap-8">
+<div class="text-center">
+<div class="text-6xl font-bold text-primary mb-2 counter" data-target="1">0</div>
+<div class="text-lg font-medium">YEARS OF<br>EXPERIENCE</div>
+</div>
+<div class="text-center">
+<div class="text-6xl font-bold text-primary mb-2 counter" data-target="5">0</div>
+<div class="text-lg font-medium">COMPLETED<br>PROJECTS</div>
+</div>
+<div class="text-center">
+<div class="text-6xl font-bold text-primary mb-2 counter" data-target="0">0</div>
+<div class="text-lg font-medium">HAPPY<br>CUSTOMERS</div>
+</div>
+<div class="text-center">
+<div class="text-6xl font-bold text-primary mb-2 counter" data-target="2">0</div>
+<div class="text-lg font-medium">AWARDS<br>WON</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="py-20 px-8 lg:px-16 bg-gray-900/50">
+<div class="container mx-auto max-w-7xl">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl lg:text-5xl font-bold mb-4">MY <span class="text-primary">SKILLS</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 fade-in">
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="31.4" class="skill-circle" data-percent="90"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">90%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">HTML</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="47.1" class="skill-circle" data-percent="85"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">85%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">CSS</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="62.8" class="skill-circle" data-percent="80"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">80%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">JavaScript</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="78.5" class="skill-circle" data-percent="75"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">75%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">React</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="94.2" class="skill-circle" data-percent="70"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">70%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">Node.js</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="47.1" class="skill-circle" data-percent="85"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">85%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">C</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="47.1" class="skill-circle" data-percent="85"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">85%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">cpp</h3>
+</div>
+<div class="text-center">
+<div class="relative w-32 h-32 mx-auto mb-4">
+<svg class="progress-circle w-32 h-32" viewBox="0 0 120 120">
+<circle cx="60" cy="60" r="50" stroke="#374151" stroke-width="8" fill="transparent"/>
+<circle cx="60" cy="60" r="50" stroke="#fbbf24" stroke-width="8" fill="transparent"
+stroke-dasharray="314" stroke-dashoffset="31.4" class="skill-circle" data-percent="90"/>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-bold text-primary">90%</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold">MySQL</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience & Education Section -->
+<section id="experience" class="py-20 px-8 lg:px-16">
+<div class="container mx-auto max-w-7xl">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl lg:text-5xl font-bold mb-4">EXPERIENCE & <span class="text-primary">EDUCATION</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid lg:grid-cols-2 gap-16">
+<!-- Experience -->
+<div class="fade-in">
+<h3 class="text-2xl font-bold mb-8 text-primary">EXPERIENCE</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-0.5 h-24 bg-gray-700 mt-2"></div>
+</div>
+<div class="flex-1">
+<div class="bg-gray-900 p-6 rounded-lg">
+<div class="text-sm text-primary font-medium mb-2"> Jan 2025-Feb2025</div>
+<h4 class="text-xl font-bold mb-2">Intern in Artificial Intelligence</h4>
+<div class="text-gray-400 mb-3"> IIT Kanpur (Dept. of Electrical Engineering) in
+ association with Bolt IoT</div>
+<p class="text-gray-300"> Gained foundational understanding and practical insights into AI applications and tools
+ through expert-led sessions.</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-0.5 h-24 bg-gray-700 mt-2"></div>
+</div>
+<div class="flex-1">
+<div class="bg-gray-900 p-6 rounded-lg">
+<div class="text-sm text-primary font-medium mb-2"> Jan 2025-Feb 2025</div>
+<h4 class="text-xl font-bold mb-2">AI Research Intern</h4>
+<div class="text-gray-400 mb-3">IIT Kanpur (Dept. of Electrical Engineering) in
+ association with Bolt IoT</div>
+<p class="text-gray-300"> Developed an AI-based sentiment analysis tool for social media using Retrieval-Augmented
+ Generation (RAG) techniques.</p>
+<p class="text-gray-300"> Collaborated with a team to design and implement the tool, enhancing skills in AI and
+ data analysis.</p>
+<p class="text-gray-300"> Implemented data preprocessing and model training pipelines, improving the tool’s
+ accuracy and efficiency</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+</div>
+<div class="flex-1">
+<div class="bg-gray-900 p-6 rounded-lg">
+<div class="text-sm text-primary font-medium mb-2">certificates</div>
+<h4 class="text-xl font-bold mb-2">1.Certificate</h4>
+<a href="https://drive.google.com/file/d/1wbJ3Wv-LxpFtOTlRTVXcREo_v3OXAIVf/view?usp=drivesdk" target="_blank" class="text-primary underline hover:text-secondary transition">
+      View Certificate
+    </a>
+<div class="text-gray-400 mb-3">2.Certificate</div>
+<a href="https://drive.google.com/file/d/11cQI50aNgCOpKoPV4ugmlR7ttq-zCsxl/view?usp=drivesdk" target="_blank" class="text-primary underline hover:text-secondary transition">
+      View Certificate
+    </a>
+<p class="text-gray-300">3.Certificate.</p>
+<a href="https://drive.google.com/file/d/11kcw_wYG0yZJYfoMLR2stXZWhRbRJk2q/view?usp=drivesdk" target="_blank" class="text-primary underline hover:text-secondary transition">
+      View Certificate
+    </a>
+    <p class="text-gray-300">thanks for viewing my certificates.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Education -->
+<div class="fade-in">
+<h3 class="text-2xl font-bold mb-8 text-primary">EDUCATION</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-0.5 h-24 bg-gray-700 mt-2"></div>
+</div>
+<div class="flex-1">
+<div class="bg-gray-900 p-6 rounded-lg">
+<div class="text-sm text-primary font-medium mb-2">2024 - PRESENT</div> 
+<h4 class="text-xl font-bold mb-2">Bachelor of Computer Applications</h4>
+<div class="text-gray-400 mb-3">Galgotias University, Greater Noida</div>
+<p class="text-gray-300">Graduated with honors. Specialized in web development, database systems, and software engineering. </p>
+<p class="text-gray-300">cgpa: 8/10</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="projects" class="py-20 px-8 lg:px-16 bg-gray-900/50">
+<div class="container mx-auto max-w-7xl">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl lg:text-5xl font-bold mb-4">MY <span class="text-primary">PROJECTS</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg cursor-pointer">
+  <a href="https://deepaksinghportfolio1.netlify.app/" target="_blank" rel="noopener noreferrer">
+<img src="https://readdy.ai/api/search-image?query=portfolio%20website%20design%20creative%20layout%20modern%20interface%20personal%20branding%20professional%20web%20development%20responsive%20design&width=400&height=300&seq=portfolio-6&orientation=landscape" alt="Portfolio Website" class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110">
+<div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="text-center">
+<h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+<p class="text-gray-300 mb-4">HTML, JavaScript, Tailwind CSS</p>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mx-auto">
+<i class="ri-external-link-line text-black"></i>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<a href="https://mahalwarsrestaurant.netlify.app/" target="_blank" rel="noopener noreferrer" class="group relative overflow-hidden rounded-lg cursor-pointer">
+<img src="https://readdy.ai/api/search-image?query=restaurant%20website%20design%20modern%20elegant%20menu%20display%20food%20photography%20responsive%20layout%20professional%20web%20development&width=400&height=300&seq=portfolio-3&orientation=landscape" alt="Restaurant Website" class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110">
+<div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="text-center">
+<h3 class="text-xl font-bold mb-2">Restaurant Website</h3>
+<p class="text-gray-300 mb-4">HTML, CSS, JavaScript</p>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mx-auto">
+<i class="ri-external-link-line text-black"></i>
+</div>
+</div>
+</div>
+</a>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
+<div class="group relative overflow-hidden rounded-lg cursor-pointer">
+<img src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20clean%20design%20shopping%20cart%20product%20listings%20responsive%20layout%20professional%20web%20development&width=400&height=300&seq=portfolio-1&orientation=landscape" alt="E-commerce Platform" class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110">
+<div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="text-center">
+<h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+<p class="text-gray-300 mb-4">React, Node.js, MongoDB</p>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mx-auto">
+<i class="ri-external-link-line text-black"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg cursor-pointer">
+<img src="https://readdy.ai/api/search-image?query=task%20management%20dashboard%20interface%20clean%20modern%20design%20project%20tracking%20team%20collaboration%20web%20application%20professional&width=400&height=300&seq=portfolio-2&orientation=landscape" alt="Task Management App" class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110">
+<div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="text-center">
+<h3 class="text-xl font-bold mb-2">Task Management App</h3>
+<p class="text-gray-300 mb-4">Vue.js, Express, PostgreSQL</p>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mx-auto">
+<i class="ri-external-link-line text-black"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg cursor-pointer">
+<img src="https://readdy.ai/api/search-image?query=real%20estate%20website%20interface%20property%20listings%20search%20filters%20modern%20design%20responsive%20layout%20professional%20web%20development&width=400&height=300&seq=portfolio-4&orientation=landscape" alt="Real Estate Platform" class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110">
+<div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="text-center">
+<h3 class="text-xl font-bold mb-2">Real Estate Platform</h3>
+<p class="text-gray-300 mb-4">React, Firebase, Maps API</p>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mx-auto">
+<i class="ri-external-link-line text-black"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-8 lg:px-16">
+<div class="container mx-auto max-w-7xl">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl lg:text-5xl font-bold mb-4">GET IN <span class="text-primary">TOUCH</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid lg:grid-cols-2 gap-16">
+<!-- Contact Info -->
+<div class="fade-in">
+<h3 class="text-2xl font-bold mb-8">DON'T BE SHY!</h3>
+<p class="text-gray-400 mb-8 text-lg leading-relaxed">
+Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-map-pin-line text-xl text-black"></i>
+</div>
+<div>
+<div class="font-medium">ADDRESS POINT</div>
+<div class="text-gray-400"> Aligarh, Uttar Pradesh (202137)</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-mail-line text-xl text-black"></i>
+</div>
+<div>
+<div class="font-medium">MAIL ME</div>
+<div class="text-gray-400">deepaksinghmahalwar.2021@gmail.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-phone-line text-xl text-black"></i>
+</div>
+<div>
+<div class="font-medium">CALL ME</div>
+<div class="text-gray-400">+91 6398267378</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full">
+<i class="ri-linkedin-line text-xl text-black"></i>
+</div>
+<div>
+<div class="font-medium">LINKEDIN</div>
+<div class="text-gray-400">linkedin.com/in/deepaksingh</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="fade-in">
+<form action="https://formsubmit.co/hearthacker9919@gmail.com" method="POST">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<input type="text" name="name" placeholder="YOUR NAME" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors">
+</div>
+<div>
+<input type="email" name="email" placeholder="YOUR EMAIL" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors">
+</div>
+</div>
+<div>
+<input type="text" name="subject" placeholder="YOUR SUBJECT" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors">
+</div>
+<div>
+<textarea rows="6" name="message" placeholder="YOUR MESSAGE" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+</div>
+<button type="submit" class="bg-primary text-black px-8 py-4 !rounded-button font-semibold hover:bg-secondary hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-300 whitespace-nowrap">
+SEND MESSAGE
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-8 px-8 lg:px-16 border-t border-gray-800">
+<div class="container mx-auto max-w-7xl text-center">
+<p class="text-gray-400">&copy; 2025 Deepak Singh . All rights reserved.</p>
+</div>
+</footer>
+<script id="navbar-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const navbar = document.querySelector('nav');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+let lastScroll = 0;
+// Handle navbar visibility on scroll
+window.addEventListener('scroll', () => {
+const currentScroll = window.pageYOffset;
+if (currentScroll <= 0) {
+navbar.style.transform = 'translateY(0)';
+return;
+}
+if (currentScroll > lastScroll && !mobileMenu.classList.contains('hidden')) {
+// Scrolling down & menu is closed
+navbar.style.transform = 'translateY(-100%)';
+} else {
+// Scrolling up
+navbar.style.transform = 'translateY(0)';
+}
+lastScroll = currentScroll;
+});
+// Mobile menu toggle
+mobileMenuButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+const icon = mobileMenuButton.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+} else {
+icon.classList.remove('ri-menu-line');
+icon.classList.add('ri-close-line');
+}
+});
+// Close mobile menu on link click
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+link.addEventListener('click', () => {
+mobileMenu.classList.add('hidden');
+const icon = mobileMenuButton.querySelector('i');
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+});
+});
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+const headerOffset = 80;
+const elementPosition = target.getBoundingClientRect().top;
+const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+window.scrollTo({
+top: offsetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+// Active link highlighting
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.clientHeight;
+if (window.pageYOffset >= sectionTop - 150) {
+current = section.getAttribute('id');
+}
+});
+document.querySelectorAll('nav a').forEach(link => {
+link.classList.remove('text-primary');
+if (link.getAttribute('href').slice(1) === current) {
+link.classList.add('text-primary');
+}
+});
+});
+});
+</script>
+<script id="scroll-animations">
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.fade-in').forEach(el => {
+observer.observe(el);
+});
+});
+const text = "Bachelor of Computer Applications";
+let index = 0;
+let isDeleting = false;
+const speed = 100;   // typing speed
+const delay = 1500;  // pause before deleting
+
+function typeEffect() {
+  const element = document.getElementById("typing-text");
+
+  if (!isDeleting) {
+    element.textContent = text.substring(0, index + 1);
+    index++;
+    if (index === text.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, delay);
+      return;
+    }
+  } else {
+    element.textContent = text.substring(0, index - 1);
+    index--;
+    if (index === 0) {
+      isDeleting = false;
+    }
+  }
+
+  setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+
+
+</script>
+<script id="counter-animation">
+document.addEventListener('DOMContentLoaded', function() {
+const counters = document.querySelectorAll('.counter');
+const animateCounter = (counter) => {
+const target = parseInt(counter.getAttribute('data-target'));
+const increment = target / 100;
+let current = 0;
+const updateCounter = () => {
+if (current < target) {
+current += increment;
+counter.textContent = Math.ceil(current);
+requestAnimationFrame(updateCounter);
+} else {
+counter.textContent = target;
+}
+};
+updateCounter();
+};
+const counterObserver = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+animateCounter(entry.target);
+counterObserver.unobserve(entry.target);
+}
+});
+}, { threshold: 0.5 });
+counters.forEach(counter => {
+counterObserver.observe(counter);
+});
+});
+</script>
+<script id="skill-circles-animation">
+document.addEventListener('DOMContentLoaded', function() {
+const skillCircles = document.querySelectorAll('.skill-circle');
+const animateSkillCircle = (circle) => {
+const percent = parseInt(circle.getAttribute('data-percent'));
+const circumference = 314;
+const offset = circumference - (percent / 100) * circumference;
+setTimeout(() => {
+circle.style.strokeDashoffset = offset;
+}, 500);
+};
+const skillObserver = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const circle = entry.target.querySelector('.skill-circle');
+if (circle) {
+animateSkillCircle(circle);
+skillObserver.unobserve(entry.target);
+}
+}
+});
+}, { threshold: 0.5 });
+document.querySelectorAll('.skill-circle').forEach(circle => {
+skillObserver.observe(circle.closest('.text-center'));
+});
+});
+</script>
+</body>
+</html>
